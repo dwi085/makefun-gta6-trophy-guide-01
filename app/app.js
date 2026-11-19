@@ -68,14 +68,17 @@ function renderStats() {
   for (const t of trophies) byGrade[t.grade] = (byGrade[t.grade] || 0) + 1;
   const gotByGrade = {};
   for (const t of trophies) if (isEarned(t)) gotByGrade[t.grade] = (gotByGrade[t.grade] || 0) + 1;
+  const totalByGrade = {};
+  for (const t of trophies) totalByGrade[t.grade] = (totalByGrade[t.grade] || 0) + 1;
+  const onlineCount = trophies.filter((t) => t.kind === 'online').length;
   const chips = [
     `${got} / ${total} trophies`,
-    `Platinum ${gotByGrade.platinum || 0}/1`,
-    `Gold ${gotByGrade.gold || 0}/2`,
-    `Silver ${gotByGrade.silver || 0}/6`,
-    `Bronze ${gotByGrade.bronze || 0}/46`,
+    `Platinum ${gotByGrade.platinum || 0}/${totalByGrade.platinum || 0}`,
+    `Gold ${gotByGrade.gold || 0}/${totalByGrade.gold || 0}`,
+    `Silver ${gotByGrade.silver || 0}/${totalByGrade.silver || 0}`,
+    `Bronze ${gotByGrade.bronze || 0}/${totalByGrade.bronze || 0}`,
     `Missable: ${trophies.filter((t) => t.missable).length} (watch Chapter 1)`,
-    'Online: 0 — all offline',
+    `Online: ${onlineCount} — all offline`,
   ];
   statsEl.replaceChildren(...chips.map((c) => {
     const s = document.createElement('span');
@@ -133,7 +136,7 @@ function renderKindFilters() {
     { key: 'collectibles', label: 'Collectibles', count: trophies.filter((t) => t.kind === 'collectibles').length },
     { key: 'activities', label: 'Activities', count: trophies.filter((t) => t.kind === 'activities').length },
     { key: 'platinum', label: 'Platinum', count: trophies.filter((t) => t.kind === 'platinum').length },
-    { key: 'online', label: 'Online', count: 0 },
+    { key: 'online', label: 'Online', count: trophies.filter((t) => t.kind === 'online').length },
   ];
   kindRow.replaceChildren(...kinds.map((k) => {
     const b = document.createElement('button');
@@ -193,7 +196,20 @@ function buildCard(t) {
     }
     saveEarned();
     renderStats();
-    renderList();
+    // With no status filter active the card stays visible: update it in place
+    // so the page does not jump and the checkbox keeps focus. When a status
+    // filter is active the card may need to leave the list, and when spoiler
+    // mode hides a story trophy it must be revealed once earned — re-render.
+    const needsRerender = statusEl.value !== 'all'
+      || (spoilerEl.checked && t.kind === 'story');
+    if (!needsRerender) {
+      card.classList.toggle('earned', isEarned(t));
+      const totalGot = trophies.filter(isEarned).length;
+      const shown = trophies.filter(matchesFilters).length;
+      resultCount.textContent = `Showing ${shown} of ${trophies.length} trophies · ${totalGot} earned`;
+    } else {
+      renderList();
+    }
   });
 
   const head = document.createElement('div');
