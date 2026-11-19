@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI 55-Trophy Tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: roadmap to the platinum, missable flags, sourced guides, checklist, export and import.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; Unofficial fan guide</p>
+  <h1>Leonida Trophy Guide</h1>
+  <p class="sub">All 55 trophies — roadmap to the platinum, the one missable trophy flagged, and a sourced guide for every single one. Works fully offline; your progress never leaves this browser.</p>
+  <div class="progress-wrap">
+    <div class="progress-line"><span id="progressText">0 of 55 earned</span><span id="progressPct">0%</span></div>
+    <div class="progress-bar"><div id="progressFill"></div></div>
+  </div>
+  <div class="stats" id="stats"></div>
+  <nav class="jump-nav" aria-label="Jump to section">
+    <a href="#roadmap">Roadmap</a>
+    <a href="#trophyList">Tracker</a>
+    <a href="#missableCallout">The missable one</a>
+  </nav>
+</header>
+
+<main>
+  <section id="roadmap" class="roadmap">
+    <h2>Roadmap to the platinum</h2>
+    <p class="roadmap-intro">PowerPyx rates the set 4/10 difficulty and about 200 hours, in a single playthrough, with no online trophies and no mission replay. Three stages:</p>
+    <div id="roadmapStages" class="stages"></div>
+    <p class="missable-callout" id="missableCallout"></p>
+  </section>
+
+  <section class="controls" aria-label="Tracker controls">
+    <div class="search-row">
+      <input id="search" type="search" placeholder="Search a trophy or a guide…" aria-label="Search trophies">
+      <label class="spoiler-toggle"><input id="spoiler" type="checkbox"> Hide story spoilers</label>
+    </div>
+    <div class="filter-row" id="kindFilters" role="group" aria-label="Filter by kind"></div>
+    <div class="filter-row sub">
+      <label>Grade
+        <select id="gradeFilter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label>Status
+        <select id="statusFilter">
+          <option value="all">All trophies</option>
+          <option value="earned">Earned only</option>
+          <option value="todo">Not earned yet</option>
+        </select>
+      </label>
+      <button id="exportBtn" type="button">Export progress</button>
+      <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+      <button id="resetBtn" type="button" class="danger">Reset</button>
+    </div>
+    <p class="hint" id="resultCount"></p>
+  </section>
+
+  <section id="trophyList" class="trophy-list" aria-live="polite"></section>
+
+  <section class="sources-note">
+    <h2>Where the facts come from</h2>
+    <p>Official trophy names, descriptions and grades are shown as PlayStation publishes them (the list matches Exophase and PSNProfiles). Every guide is written for this page in our own words, and every fact in it names its source beside it — the full list of sources is below. Four trophies were still unconfirmed by every guide at launch; those say so honestly instead of guessing. <strong>This is an unofficial fan guide, not affiliated with Rockstar Games, and it uses no Rockstar logo, artwork or game screenshots.</strong></p>
+    <ul id="sourceList"></ul>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Trophy Guide — built as an offline static page. Progress is stored only in your browser (localStorage). Export it to keep a backup.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
