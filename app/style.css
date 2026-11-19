@@ -223,6 +223,7 @@ button.danger { border-color: var(--danger); color: #ffb3ab; }
   color: var(--muted);
 }
 .tag.missable { border-color: var(--danger); color: #ffb3ab; }
+.tag.hidden { border-color: #8d7bd8; color: #c9bfff; }
 .tag.stage { border-color: var(--teal); color: var(--teal); }
 
 .guide-body { margin-top: 12px; border-top: 1px solid var(--line); padding-top: 12px; }

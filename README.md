@@ -6,7 +6,7 @@
 
 An offline guide and tracker for all **55 PlayStation 5 trophies** of Grand Theft Auto VI, built for the [make.fun GTA 6 trophy guide bounty](https://make.fun/c/gta6-trophy-guide-01).
 
-Bounty page: https://make.fun/bounty/gta6-trophy-guide-01
+Bounty page: [gta6-trophy-guide-01](https://make.fun/bounty/gta6-trophy-guide-01)
 
 - **Every trophy** with its official name, description and grade, plus a guide in our own words that cites its sources (PowerPyx, KeenGamer, Output Lag, GTA Zone, EGamers, GTA Vice City Hub).
 - **Roadmap to the platinum** in 3 stages (story → 100% checklist → cleanup), built from the official descriptions.

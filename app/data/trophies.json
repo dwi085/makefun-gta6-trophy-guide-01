@@ -2,7 +2,8 @@
   "game": "Grand Theft Auto VI",
   "platform": "PlayStation 5",
   "list": "Official 55 trophies: 1 platinum, 2 gold, 6 silver, 46 bronze; 28 hidden until earned. Names, descriptions and grades as published on PlayStation (Exophase and PSNProfiles list the same 55).",
-  "note": "Guides below are written for this guide in our own words. Each cites the sources its facts come from; open a source link to read the full original guide. Four trophies were still unconfirmed by every guide at launch — those say so honestly instead of guessing.",
+  "note": "Guides below are written for this guide in our own words. Each cites the sources its facts come from; open a source link to read the full original guide. Five trophies were still unconfirmed by every guide at launch — those say so honestly instead of guessing.",
+  "hiddenIds": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 22, 23, 24, 26, 27, 29, 37, 38, 44, 45, 46, 47, 48, 49, 50, 51],
   "sources": [
     { "name": "PowerPyx — GTA 6 Trophy Guide & Roadmap", "url": "https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/" },
     { "name": "KeenGamer — GTA 6 Trophy Guide & Platinum Roadmap", "url": "https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/" },
@@ -140,8 +141,8 @@
       "kind": "story",
       "missable": false,
       "stage": 1,
-      "guide": "Story trophy for the Chapter 3 mission The Cartel Heist. It is unmissable — play the main story and it unlocks when the heist is done.",
-      "steps": ["Reach the mission The Cartel Heist in Chapter 3.", "Complete it to unlock the trophy."],
+      "guide": "Story trophy for the Chapter 3 mission The Cartel Heist. It is unmissable — play the main story and it unlocks when the heist is done. Like every story trophy it stays hidden on PlayStation until you earn it, and there is no mission replay, so keep a manual save at the start of Chapter 3 if you ever want to play the heist again.",
+      "steps": ["Reach the mission The Cartel Heist in Chapter 3.", "Complete it to unlock the trophy.", "Keep a manual save at the start of Chapter 3 — GTA 6 has no mission replay."],
       "sources": [
         { "name": "PowerPyx", "url": "https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/" },
         { "name": "KeenGamer", "url": "https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/" }
@@ -156,8 +157,8 @@
       "kind": "story",
       "missable": false,
       "stage": 1,
-      "guide": "Story trophy for the Chapter 4 mission Child's Play. Automatic — finish the mission as part of the main story and the trophy follows.",
-      "steps": ["Reach the mission Child's Play in Chapter 4.", "Complete it to unlock the trophy."],
+      "guide": "Story trophy for the Chapter 4 mission Child's Play. Automatic — finish the mission as part of the main story and the trophy follows. Like every story trophy it stays hidden on PlayStation until you earn it, and there is no mission replay, so keep a manual save at the start of Chapter 4 if you ever want to play it again.",
+      "steps": ["Reach the mission Child's Play in Chapter 4.", "Complete it to unlock the trophy.", "Keep a manual save at the start of Chapter 4 — GTA 6 has no mission replay."],
       "sources": [
         { "name": "PowerPyx", "url": "https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/" },
         { "name": "Output Lag", "url": "https://outputlag.com/guides/gta-6-trophy-list/" }
@@ -171,8 +172,8 @@
       "kind": "story",
       "missable": false,
       "stage": 1,
-      "guide": "Story trophy for the Chapter 4 mission Headliners. It unlocks on its own when the mission is complete — no extra objective, no hidden requirement.",
-      "steps": ["Reach the mission Headliners in Chapter 4.", "Complete it to unlock the trophy."],
+      "guide": "Story trophy for the Chapter 4 mission Headliners. It unlocks on its own when the mission is complete — no extra objective, no hidden requirement. Like every story trophy it stays hidden on PlayStation until you earn it, and there is no mission replay, so keep a manual save at the start of Chapter 4 if you ever want to play it again.",
+      "steps": ["Reach the mission Headliners in Chapter 4.", "Complete it to unlock the trophy.", "Keep a manual save at the start of Chapter 4 — GTA 6 has no mission replay."],
       "sources": [
         { "name": "PowerPyx", "url": "https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/" },
         { "name": "GTA Zone", "url": "https://gta-zone.com/news/gta-6-trophies-achievements/" }
@@ -201,8 +202,8 @@
       "kind": "story",
       "missable": false,
       "stage": 1,
-      "guide": "Story trophy for the Chapter 5 mission Operation Savage Glory. Automatic story progress — complete the mission and the trophy unlocks.",
-      "steps": ["Reach the mission Operation Savage Glory in Chapter 5.", "Complete it to unlock the trophy."],
+      "guide": "Story trophy for the Chapter 5 mission Operation Savage Glory. Automatic story progress — complete the mission and the trophy unlocks. Like every story trophy it stays hidden on PlayStation until you earn it, and there is no mission replay, so keep a manual save at the start of Chapter 5 if you ever want to play it again.",
+      "steps": ["Reach the mission Operation Savage Glory in Chapter 5.", "Complete it to unlock the trophy.", "Keep a manual save at the start of Chapter 5 — GTA 6 has no mission replay."],
       "sources": [
         { "name": "PowerPyx", "url": "https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/" },
         { "name": "Output Lag", "url": "https://outputlag.com/guides/gta-6-trophy-list/" }
@@ -860,7 +861,7 @@
     {
       "stage": 3,
       "title": "Stage 3 — Cleanup (about 10 hours)",
-      "text": "Sweep up the Strangers & Freaks strands, the odd activities and any collectible sets left over, then confirm the four still-unconfirmed trophies (In The Beginning…, Capital Offense, Bad Luck, I Guess, The Truth Is Out There, Ten Pin) against the source guides. The platinum pops the moment the last trophy does."
+      "text": "Sweep up the Strangers & Freaks strands, the odd activities and any collectible sets left over, then confirm the five still-unconfirmed trophies (In The Beginning…, Capital Offense, Bad Luck, I Guess, The Truth Is Out There, Ten Pin) against the source guides. The platinum pops the moment the last trophy does."
     }
   ],
   "facts": {

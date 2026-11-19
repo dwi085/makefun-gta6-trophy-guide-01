@@ -22,6 +22,7 @@ const statsEl = document.getElementById('stats');
 
 let doc = null;
 let trophies = [];
+let hiddenIds = new Set();
 let earned = loadEarned();
 let activeKind = params.get('kind') || 'all';
 let revealed = new Set();
@@ -78,6 +79,7 @@ function renderStats() {
     `Silver ${gotByGrade.silver || 0}/${totalByGrade.silver || 0}`,
     `Bronze ${gotByGrade.bronze || 0}/${totalByGrade.bronze || 0}`,
     `Missable: ${trophies.filter((t) => t.missable).length} (watch Chapter 1)`,
+    `Hidden: ${hiddenIds.size} until earned`,
     `Online: ${onlineCount} — all offline`,
   ];
   statsEl.replaceChildren(...chips.map((c) => {
@@ -243,6 +245,12 @@ function buildCard(t) {
     m.textContent = '⚠ Missable';
     tags.append(m);
   }
+  if (hiddenIds.has(t.id)) {
+    const h = document.createElement('span');
+    h.className = 'tag hidden';
+    h.textContent = 'Hidden';
+    tags.append(h);
+  }
   const stageTag = document.createElement('span');
   stageTag.className = 'tag stage';
   stageTag.textContent = stageLabel(t.stage);
@@ -364,6 +372,7 @@ async function init() {
   if (!res.ok) throw new Error(`could not load ${DATA_URL}: ${res.status}`);
   doc = await res.json();
   trophies = doc.trophies;
+  hiddenIds = new Set(Array.isArray(doc.hiddenIds) ? doc.hiddenIds : []);
 
   if (params.get('spoiler') === 'on') spoilerEl.checked = true;
   if (params.get('spoiler') === 'off') spoilerEl.checked = false;
